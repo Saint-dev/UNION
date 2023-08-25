@@ -1,0 +1,229 @@
+:root {
+    --blue: #0000ff;
+    --indigo: #3d5afe;
+    --purple: #aa00ff;
+    --pink: #f50057;
+    --red: #ff1744;
+    --orange: #ff9100;
+    --yellow: #ffff00;
+    --green: #00e676;
+    --teal: #1de9b6;
+    --cyan: #00e5ff;
+    --white: #ffffff;
+    --gray: #868e96;
+    --gray-dark: #343a40;
+    --primary: #00e5ff;
+    --secondary: #ffff00;
+    --success: #00e676;
+    --info: #aa00ff;
+    --warning: #ff9100;
+    --danger: #ff1744;
+    --light: #f8f9fa;
+    --dark: #212529;
+    --breakpoint-xs: 0;
+    --breakpoint-sm: 576px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 992px;
+    --breakpoint-xl: 1200px;
+    --font-family-sans-serif: Arimo, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-family-sans-serif);
+    box-sizing: border-box;
+}
+
+.header {
+    position: fixed;
+
+    width: 100%;
+    padding: 25px;
+    background-color: white;
+}
+
+.header__nav {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__menu {
+    list-style: none;
+}
+
+.header__menu-item {
+    display: inline-block;
+}
+
+.header__menu-link {
+  color: #4c4c4c;
+  font-weight: 600;
+  padding:  20px;
+    text-decoration: none;
+
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100ch;
+}
+.main__content {
+  margin-top: 100px;
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.main__image {
+  width: 70%;
+}
+
+.main__title {
+  line-height: 4rem;
+  font-size: 2.5rem;
+}
+
+.main__description {
+
+line-height: 28.8px;
+  font-size: 1rem;
+  color: #343a40;
+  font-family: var(--font-family-monospace);
+}
+strong {
+  color: var(--dark);
+}
+
+
+hr {
+  color: #343a40
+;
+  width: 1100px;
+    display: block; 
+    margin: 0 auto; 
+}
+section {
+   
+}
+.section--primary{
+
+ height: 40vh;
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+}
+.section__title {
+  padding-bottom: 25px;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  text-align: center;
+  font-weight:100;
+}
+
+.section--secondary {
+
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section--secondary .section__content {
+  gap: 6px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.section__sub-title {
+  font-size: 1.5rem;
+}
+
+.section__paragraph {
+  line-height: 2rem;
+  color: #868e96;
+  font-size: 1.2rem;
+}
+
+.section__button {
+  border: none;
+   width: 130px;
+   color: white;
+   font-weight: 700;
+   font-size: 17px;
+
+  height: 3rem;
+  border-radius: 4px;
+  background: var(--green);
+}
+
+.container-img { 
+  color: #868e96;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+.client-1 {
+
+  border-radius: 70px;
+  width: 50px;
+}
+
+/* Estilos responsivos */
+@media screen and (max-width: 768px) {
+  .section--secondary {
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+  }
+
+  .tab {
+    gap: 2px;
+    display: flex;
+    flex-direction: column;
+     justify-content: space-between;
+    align-items: center;
+    cursor: pointer; /* Adicionado para indicar que é clicável */
+  }
+
+  .linha {
+    width: 30px;
+    height: 2px;
+    background-color: var(--dark);
+  }
+
+  .header__menu {
+    display: none;
+  }
+
+  /* Estilos para mostrar o menu no modo responsivo */
+  .header__menu.active {
+    transition: 0.5s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 60px; /* Ajuste conforme necessário */
+       background-color: white; /* Ajuste conforme necessário */
+    padding: 100px;
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .main, .section--secondary {
+    width: 90%;
+  margin: 0 auto;
+  }
+}
